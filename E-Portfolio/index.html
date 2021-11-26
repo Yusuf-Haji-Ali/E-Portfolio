@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yusuf Haji-Ali</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_K1PoFs8pB2YVWStDxrUls");
+    })();
+  </script>
+</head>
+
+<body>
+  <section id="landing-page" onmousemove="moveBackground(event)">
+    <nav>
+      <i id="personal-logo" class="fas fa-user-ninja"></i>
+      <ul class="nav__link--list">
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--blue
+          ">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--blue
+          ">Projects</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--blue
+          ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
+            nav__link--anchor
+          "><i class="fas fa-adjust"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="title">Hey,</h1>
+        <h1 class="title blue">I'm Yusuf.</h1>
+        <!-- <div class="header__slider">
+          <h2 class="sub-title blue">Developer</h2>
+          <h2 class="sub-title blue">Designer</h2>
+        </div> -->
+        <p class="header__para">
+          I'm a <b class="blue">Frontend Software Engineer</b> with a strong passion for building web applications
+          with great user
+          experiences.
+          <br>
+          Here's a bit more <b class="blue click" onclick="toggleModal()">about me</b>.
+        </p>
+        <div class="social__list">
+          <a href="https://www.linkedin.com/in/yusuf-haji-ali" target="_blank" class="social__link click">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/" target="_blank" class="social__link click">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="./assets/Yusuf Resume.pdf" target="_blank" class="social__link click">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
+      <div class="developer--img">
+        <figure>
+          <img src="./assets/Images/developer.svg" alt="">
+        </figure>
+      </div>
+    </header>
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </a>
+    <a href="#projects" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+    <div class="container">
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+          <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+          <p class="modal__para">
+            I'm a 23 year-old <b class="blue">software engineer student</b> from the UK with a strong passion for
+            building responsive & dynamic <b class="blue">web applications</b> with great <b class="blue">user experiences.</b>
+          </p>
+          <p>
+            I currently don't even know what I'm writing rn, this is just pure <b class="blue">waffle</b> while i'm <b class="blue">coding😅</b>
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt="">
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt="">
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/Icons/java.svg" alt="">
+              <span class="language__name">Java</span>
+            </figure>
+
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/Icons/php.png" alt="">
+              <span class="language__name">PHP</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/Icons/sql.png" alt="">
+              <span class="language__name">SQL</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities.
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon.
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/Shapes/semi circle.svg" class="shape shape--0">
+    <img src="./assets/Shapes/circle.svg" class="shape shape--1">
+    <img src="./assets/Shapes/squiggly.svg" class="shape shape--2">
+    <img src="./assets/Shapes/circle.svg" class="shape shape--3">
+    <img src="./assets/Shapes/triangle.svg" class="shape shape--4">
+    <img src="./assets/Shapes/circle.svg" class="shape shape--5">
+    <img src="./assets/Shapes/squiggly.svg" class="shape shape--6">
+    <img src="./assets/Shapes/circle.svg" class="shape shape--7">
+    <img src="./assets/Shapes/semi circle.svg" class="shape shape--8">
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title">
+          Here are some of my <span class="blue">Projects</span>
+        </h1>
+        <!-- <div class="project-browse">
+        <i class="fas fa-chevron-left"></i> -->
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Projects/Web_app_project.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  E-Health Application
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, PHP
+                </h4>
+                <p class="project__description--para">
+                  This is a web application that hosts a single questionnaire form, which allows users to register and
+                  login. It includes a dashboard where users can see the responses from the survey in graphs and
+                  charts, which can be accessed by administrative users.
+                </p>
+                <div class="project__description--links">
+                  <a href="" class="project__description--link">
+                    <i class="fa fa-github"></i>
+                  </a>
+                  <a href="" class="project__description--link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- <i class="fas fa-chevron-right"></i> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+          <i class="fas fa-user-ninja footer__logo click"></i>
+          <span class="footer__logo--popper">
+            Top
+            <i class="fas fa-arrow-up"></i>
+          </span>
+        </a>
+        <div class="footer__social--list">
+          <a href="https://www.github.com/" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/yusuf-haji-ali" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            LinkedIn
+          </a>
+          <a href="#" onclick="toggleModal()" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <a href="./assets/Yusuf Resume.pdf" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2021 Yusuf Haji-Ali</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
